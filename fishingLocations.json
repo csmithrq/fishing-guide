@@ -1,0 +1,23 @@
+[
+	{
+		"location": "Delta"
+		, "coordinates": ""
+		, "waterType": "fresh"
+		, "locationType": "river"
+		, "fish": "Striped Bass, Sturgeon, Catfish"
+	}
+	, {
+		"location": "Lake Chabot"
+		, "coordinates": ""
+		, "waterType": "fresh"
+		, "locationType": "lake" 
+		, "fish": "Trout, Catfish, Bass, Bluegill"
+	}
+	, {
+		"location": "Stanislaus River, Knights Ferry"
+		, "coordinates": ""
+		, "waterType": "fresh"
+		, "locationType": "lake"
+		, "fish": "Steelhead, Salmon, Stripers, Carp"
+	}
+]

@@ -1,0 +1,28 @@
+[
+	{
+		"fish": "Striped Bass"
+		, "fishGroup": "Bass"
+		, "feedingType": "hunter"
+		, "feedingNotes": "Insatiable feeders that can eat a wide variety of things but focus on the most readily available invertebrates and forage fish in the area. Striped bass have a keen sense of smell and so artificial smells on lures should be avoided. Striped bass hunt at short range by vision and are excellent nocturnal hunters. Eye location facilitates looking up at its prey from below. Stripers are sensitive to a large part of the color spectrum and very rapid movements. Their peak response to color was yellow, so chartreuse colored lures work well. In murky waters, stripes have to use senses other than their sight and so shrimp / invertebrates are a choice."
+		, "sizeByAge": "year 1, 4-5 inches;year 2, 11 inches;year 3, 16 inches; year 4, 20 inches; year 12, 36 inches"
+		, "legality": "CA: 18 inches"
+	}
+	, {
+		"fish": "Rainbow Trout"
+		, "fishGroup": "Trout"
+		, "feedingType": "hunter"
+		, "feedingNotes": "Trout are not picky eaters. Insects are the main source of food for trout throughout life, although they are opportunistic hunters of forage fish. If trout are active at the surface for insects, they will not bite on anything else. Rainbows feed until they're full and then won't eat until they digest their food."
+		, "sizeByAge": ""
+		, "legality": ""
+		, "additionalNotes": "Trout are cold water fish with optimal growth at 15-18 deg C. There are a bunch of varieties in CA. Light line is required as trout have very good eyesight."
+	}
+	, {
+		"fish": "Catfish"
+		, "fishGroup": "Catfish"
+		, "feedingType": "Scavenger"
+		, "feedingNotes": "Catfish are bottom-feeders (this is because they have negative buoyancy). Catfish feed through suction. Catfish primarily find food by using their barbells, sense of smell and taste but have okay vision in clear water. Catfish are omnivores. Some catfish have been found trailing prey by following their wake. Once catfish pass about 18 inches in length, fish are the largest part of their diet. "
+		, "sizeByAge": "About 1 pound per year"
+		, "legality": ""
+		, "additionalNotes": "Catfishing can be good at any time of day. When the weather/water is cooler, the catfish bite can be good during the day but in summer it's best to go at night. In rivers, catfish move upstream in spring so they can be found at damns or obstructions upriver. "
+	}
+]

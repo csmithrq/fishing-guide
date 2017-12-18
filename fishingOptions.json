@@ -1,0 +1,52 @@
+[
+	{
+		"location": "Delta"
+		, "fish": "Striped Bass"
+		, "trigger": "Striped bass start moving in March from the SF Bay into freshwater to spawn."
+		, "startMonth": 3
+		, "endMonth": 8
+		, "startDate": "yyyy/03/dd"
+		, "endDate": "yyyy/08/dd"
+		, "strategy": "artificials like rip baits, swim baits. Striped bass continue to feed while spawning so replicating their food (like shad) is what you're going for."
+	}
+	, {
+		"location": "SF Bay"
+		, "fish": "Striped Bass"
+		, "trigger": "Striped bass migrate out of fresh water and the Delta and into the SF Bay."
+		, "startMonth": 6
+		, "endMonth": 10
+		, "startDate": "yyyy/06/dd"
+		, "endDate": "yyyy/10/dd"
+		, "strategy": "Drift fishing with live bait (herring, mackeral, anchovy) is popular in the SF Bay."
+	}
+	, {
+		"location": "Lake Chabot"
+		, "fish": "Catfish"
+		, "trigger": "Catfish are stocked in Lake Chabot"
+		, "startMonth": ""
+		, "endMonth": ""
+		, "startDate": ""
+		, "endDate": ""
+		, "strategy": "Long soak of stinkbaits like anchovy chunks or chicken livers at the bottom with a sliding sinker rig."
+	}
+	, {
+		"location": "Lake Chabot"
+		, "fish": "Trout"
+		, "trigger": "Trout are stocked at Lake Chabot periodically and especially during winter."
+		, "startMonth": ""
+		, "endMonth": ""
+		, "startDate": ""
+		, "endDate": ""
+		, "strategy": "Trolling with pink flicker shad or Rapalas."
+	}
+	, {
+		"location": "Knights Ferry"
+		, "fish": "Salmon, Steelhead"
+		, "trigger": "Salmon travel up the Stanislaus to spawn, and the Steelheads are right behind them to eat their eggs."
+		, "startMonth": 1
+		, "endMonth": 3
+		, "startDate": "yyyy/01/01"
+		, "endDate": "yyyy/03/01"
+		, "strategy": "The Stanislaus has a lot of restrictions, including special cards that need to be had and no barbed hooks / live bait. Salmon eggs are a good bet for this to match the spawn."
+	}
+]
