@@ -3,5 +3,11 @@ Successful fishers keep journals, season-by-season, spot-by-spot, fish-by-fish o
 
 This project aims to consolidate that information and provide simple means of exposing it, and eventually suggesting options based on dates, fishing reports and local triggers. I want to answer this question when I wake up and have a fishing itch: what can I go fish for today?
 
-From a technical perspective, I'm looking to get my feet under me in Python and get more exposure to Mongo DB, API's and end-to-end web development.
+From a technical perspective, I'm looking to get my feet under me in Python and get more exposure to Mongo DB, API's and end-to-end web development. 
 
+As of 12/18:
+-> write json data via persistence service to mongoDb.
+-> fetch fish profiles and fishing options from a rest API
+-> mapped two fishing report feeds to cover ~10 locations
+-> persist fishing reports to the database by source, without duplicates
+-> java background is showing as code is not very pythonic... duck typing + asking forgiveness than permission
