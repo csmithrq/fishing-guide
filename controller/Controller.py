@@ -17,12 +17,24 @@ import re
 
 print("Beginning execution...")
 
+connection = MongoClient('localhost', 27017)
+mongo = MongoPersistence(connection)
+
 str = "December 20, 2016"
+regexDateMatch = re.compile('(January|February|March|April|May|June|July|August|September|October|November|December).+\d{2},.+\d{4}')
 
 dt = datetime.strptime(str, '%B %d, %Y')
 print(type(dt))
 print(dt)
 
+dt2 = re.search(regexDateMatch,str)
+print(type(dt2.group()))
+print(dt2.group())
+
+test = mongo.fetchFishingReportIds(5)
+print(test)
+for id in test:
+    print(mongo.fetchFishingReport(id))
 #
 #conf=""
 #feedGrabber = FeedGrabber(conf)

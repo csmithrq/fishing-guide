@@ -22,7 +22,8 @@ for source in feedConf:
         lastReportDate = mongo.fetchMostRecentReportDate(source)
     except IndexError as error:
         lastReportDate = datetime.strptime("2000/01/01", "%Y/%M/%d")
-
+    print(source)
+    print(lastReportDate)
     for fishingReport in fishingReports:
         if fishingReport.reportDate > lastReportDate:
             print("Wrote fishing report for date " + str(fishingReport.reportDate))

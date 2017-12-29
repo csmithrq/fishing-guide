@@ -30,7 +30,7 @@ class PersistenceService(metaclass=ABCMeta):
         pass
 
     @abstractmethod
-    def fetchFishingReportIds(self, startDate, endDate, source, location):
+    def fetchFishingReportIds(self, startDate, endDate, source, location, limit):
         pass
     @abstractmethod
     def fetchFishingReport(self, id):

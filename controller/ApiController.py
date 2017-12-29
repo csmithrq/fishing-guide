@@ -5,6 +5,7 @@ from pymongo import MongoClient
 from pprint import pprint
 import logging
 import inspect
+import datetime
 
 app = Flask(__name__)
 api = Api(app)
@@ -46,12 +47,23 @@ def option():
         logging.error(error)
         raise
 
-@app.route('/test', methods=['GET'])
-def test():
+@app.route('/reports', methods=['GET'])
+def reports():
+    reportDisplay = ""
     try:
-        return testHtml
+        args = request.args
+        limit = int(args['limit'])
+        ids = mongo.fetchFishingReportIds(limit)
+        for id in ids:
+            report = mongo.fetchFishingReport(id)
+            reportDisplay += '<hr>'
+            reportDisplay += '<H1>' + report.location + '</H1>'+ '<br>'
+            reportDisplay += '<H1>' + report.reportDate.strftime("%Y-%m-%d %H:%M:%S") + '</H1>' + '<br>'
+            reportDisplay += report.reportContent
+        return reportDisplay
     except Exception as error:
         logging.error(error)
+        print(error)
         raise
 
 if __name__ == "__main__":

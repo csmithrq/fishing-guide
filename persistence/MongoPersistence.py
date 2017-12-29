@@ -106,7 +106,7 @@ class MongoPersistence(PersistenceService):
         jsonReport = json_util.loads(json.dumps(vars(fishingReport), default=json_util.default))
         return self.writeOne('fishingReports', jsonReport)
 
-    def fetchFishingReportIds(self, startDate=None, endDate=None, source=None, location=None):
+    def fetchFishingReportIds(self, limit=10, startDate=None, endDate=None, source=None, location=None):
         queryCriteria = []
         if startDate is not None and endDate is not None:
             queryCriteria.append({"reportDate": {'$gte': startDate}})
@@ -117,8 +117,12 @@ class MongoPersistence(PersistenceService):
             queryCriteria.append({"location": {'$regex': re.compile(location, re.IGNORECASE)}})
         coll = self.database['fishingReports']
         ids = []
-        for reportJson in coll.find({'$and': queryCriteria}):
-            ids.append(reportJson['_id'])
+        if queryCriteria == []:
+            for reportJson in coll.find().sort([('reportDate', -1)]).limit(limit):
+                ids.append(reportJson['_id'])
+        else:
+            for reportJson in coll.find({'$and': queryCriteria}).sort([('reportDate', -1)]).limit(limit):
+                ids.append(reportJson['_id'])
         return ids
 
     def fetchFishingReport(self, id):
@@ -139,7 +143,7 @@ class MongoPersistence(PersistenceService):
 
     def fetchMostRecentReportDate(self, source):
         coll = self.database['fishingReports']
-        reportDate = coll.find().sort([('reportDate', -1)]).limit(1)[0]["reportDate"]
+        reportDate = coll.find({'reportSource' : {'$eq': source}}).sort([('reportDate', -1)]).limit(1)[0]["reportDate"]
         return reportDate
 
     ## Helper utilities.
